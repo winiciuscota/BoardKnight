@@ -14,14 +14,14 @@ Docker
 
 ## Instructions
 
-You will need docker installed to run the project, after this requirement is satisfied you can run the project with the following commands:
+You will need to have docker installed to run the project, after this requirement is satisfied you can run the project with the following commands:
 
 ```console
 foo@bar:~$ docker-compose build
 foo@bar:~$ docker-compose up
 ```
 
-After this, the application will be accessible on http://localhost:4200.
+After this, the application will be accessible on <http://localhost:4200.>
 
 ## Using the Web Application
 
@@ -30,12 +30,10 @@ The usage of the web application is really simple, a chessboard(kind of) is pres
 ## Using the Api
 
 The api endpoint is available at:
-http://localhost:5000/api/boardknight/{position}/moves/{nrMoves}.
-http://localhost:5000/api/boardknight/{position}
+<http://localhost:5000/api/boardknight/{position}/moves/{nrMoves}.>  
+<http://localhost:5000/api/boardknight/{position}>
 
 Where position is the selected position of the knight in algebraic notation and nrMoves is the number of turns(1 or 2). f the number of moves is not informed, 1 will be assumed by default.
-
-
 
 The api will return a list of all the possible positions of the knight after that number of turns.
 
@@ -49,7 +47,7 @@ Example of the api output:
 
 The unit tests were written using xunit and are available on backend/tests.
 
-The unittests will run altomatically in the dockerfile and will break the build if there is any failure.
+The unittests will run automatically in the dockerfile and will break the build if there is any failure.
 
 If you have the dotnet sdk installed the unittests can also be run with:
 
