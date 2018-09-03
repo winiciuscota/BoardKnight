@@ -14,14 +14,20 @@ Docker
 
 ## Instructions
 
-You will need to have docker installed to run the project, after this requirement is satisfied you can run the project with the following commands:
+You will need to have docker installed to run the project, after this requirement is satisfied you can run the project with the following commands in the project directory:
 
 ```console
 foo@bar:~$ docker-compose build
 foo@bar:~$ docker-compose up
 ```
 
-After this, the application will be accessible on <http://localhost:4200.>
+After this, the application will be accessible on <http://localhost:4200.>  
+
+To stop the stack run the following commmand in the project directory:
+
+```console
+foo@bar:~$ docker-compose down
+```
 
 ## Using the Web Application
 
@@ -29,7 +35,7 @@ The usage of the web application is really simple, a chessboard(kind of) is pres
 
 ## Using the Api
 
-The api endpoint is available at:
+The api endpoint is available at:  
 <http://localhost:5000/api/boardknight/{position}/moves/{nrMoves}.>  
 <http://localhost:5000/api/boardknight/{position}>
 
