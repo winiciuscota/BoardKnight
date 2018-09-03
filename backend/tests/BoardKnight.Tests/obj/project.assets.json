@@ -5772,11 +5772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/winicius/Projects/AspNetCore/BoardKnight/tests/BoardKnight.Tests/BoardKnight.Tests.csproj",
+      "projectUniqueName": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/tests/BoardKnight.Tests/BoardKnight.Tests.csproj",
       "projectName": "BoardKnight.Tests",
-      "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/tests/BoardKnight.Tests/BoardKnight.Tests.csproj",
+      "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/tests/BoardKnight.Tests/BoardKnight.Tests.csproj",
       "packagesPath": "/home/winicius/.nuget/packages/",
-      "outputPath": "/home/winicius/Projects/AspNetCore/BoardKnight/tests/BoardKnight.Tests/obj/",
+      "outputPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/tests/BoardKnight.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/opt/dotnet/sdk/NuGetFallbackFolder"
@@ -5793,8 +5793,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Domain/BoardKnight.Domain.csproj": {
-              "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Domain/BoardKnight.Domain.csproj"
+            "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Domain/BoardKnight.Domain.csproj": {
+              "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Domain/BoardKnight.Domain.csproj"
             }
           }
         }

@@ -15,7 +15,7 @@ namespace BoardKnight.Tests.Domain
         public void GetPossibleMoves_Test(string positionStr, string[] possibleMoves)
         {
             var predictor = new BoardKnightPredictor();
-            var predictedValues = predictor.GetPossibleMoves(new ChessPosition(positionStr))
+            var predictedValues = predictor.GetPossiblePositions(new ChessPosition(positionStr))
                                             .Select(x => x.AlgebraicNotation).ToArray();
 
             var result = Enumerable.SequenceEqual(predictedValues.OrderBy(x => x), possibleMoves.OrderBy(x => x));

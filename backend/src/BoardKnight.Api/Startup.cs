@@ -26,6 +26,13 @@ namespace BoardKnight.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddCors(o => o.AddPolicy("Policy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +47,11 @@ namespace BoardKnight.Api
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors("Policy");
+            // app.UseHttpsRedirection();
             app.UseMvc();
+
+            
         }
     }
 }

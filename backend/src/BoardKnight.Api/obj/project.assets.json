@@ -11522,11 +11522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Api/BoardKnight.Api.csproj",
+      "projectUniqueName": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Api/BoardKnight.Api.csproj",
       "projectName": "BoardKnight.Api",
-      "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Api/BoardKnight.Api.csproj",
+      "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Api/BoardKnight.Api.csproj",
       "packagesPath": "/home/winicius/.nuget/packages/",
-      "outputPath": "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Api/obj/",
+      "outputPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Api/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/opt/dotnet/sdk/NuGetFallbackFolder"
@@ -11543,8 +11543,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Domain/BoardKnight.Domain.csproj": {
-              "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/src/BoardKnight.Domain/BoardKnight.Domain.csproj"
+            "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Domain/BoardKnight.Domain.csproj": {
+              "projectPath": "/home/winicius/Projects/AspNetCore/BoardKnight/backend/src/BoardKnight.Domain/BoardKnight.Domain.csproj"
             }
           }
         }

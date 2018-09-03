@@ -14,7 +14,7 @@ namespace BoardKnight.Domain
             // List of all possible moves for the knight
             _moves = new List<(int x, int y)> { (-2, 1), (-2, -1), (-1, 2), (1, 2), (2, 1), (2, -1), (-1, -2), (1, -2) };
         }
-        public IEnumerable<ChessPosition> GetPossibleMoves(ChessPosition position)
+        public IEnumerable<ChessPosition> GetPossiblePositions(ChessPosition position)
         {
             foreach (var move in _moves)
             {
@@ -23,6 +23,12 @@ namespace BoardKnight.Domain
                 if (newPosition.Valid)
                     yield return newPosition;
             }
+        }
+
+        public IEnumerable<ChessPosition> GetPossiblePositionsWith2Moves(ChessPosition position)
+        {
+            var firstMovePositions = GetPossiblePositions(position);
+            return firstMovePositions.SelectMany(x => GetPossiblePositions(x)).Distinct();
         }
 
     }

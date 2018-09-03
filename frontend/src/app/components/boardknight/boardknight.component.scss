@@ -1,0 +1,37 @@
+$primary-color: #966F33;
+$cell-size: 50px;
+
+// .board-index {
+//   width: $cell-size;
+//   height: $cell-size;
+//   float: left
+// }
+
+.board-cell {
+  border: 1px solid darken($primary-color, 20);
+  color: darken($primary-color, 20);
+  background: lighten($primary-color, 25);
+  padding: 7px 13px;
+  font-size: 20px;
+  width: $cell-size;
+  height: $cell-size;
+  float: left;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: darken($primary-color, 0);
+  }
+
+  &:nth-child(8n + 1) {
+    clear: left;
+  }
+}
+
+.board-cell.cell-highlighted {
+  background: lighten($primary-color, 10);
+}
+
+.board-board {
+  margin: 0 auto;
+}

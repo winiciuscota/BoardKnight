@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BoardKnight.Domain;
 using BoardKnight.Domain.ValueObjects;
+using System.Text.RegularExpressions;
 
 namespace BoardKnight.Api.Controllers
 {
@@ -14,9 +15,15 @@ namespace BoardKnight.Api.Controllers
     {
         // GET api/values/5
         [HttpGet("{position}")]
-        public ActionResult<IEnumerable<string>> GetPossibleMoves(string position)
+        [HttpGet("{position}/moves/{moves}")]
+        public ActionResult<IEnumerable<string>> GetPossiblePositions(string position, int moves = 1)
         {
-            if(position.Length != 2) 
+            var inputPattern = @"^\w\d$";
+            Regex r = new Regex(inputPattern, RegexOptions.IgnoreCase);
+
+            var validMoves = moves > 0 && moves <= 2;
+
+            if(!r.Match(position).Success || !validMoves) 
             {
                 return BadRequest("Invalid input");
             }
@@ -27,7 +34,11 @@ namespace BoardKnight.Api.Controllers
             }
 
             var boardKnightPredictor = new BoardKnightPredictor();
-            var result = boardKnightPredictor.GetPossibleMoves(chessPosition).Select(x => x.AlgebraicNotation);
+
+            IEnumerable<ChessPosition> positions = moves == 1 ? boardKnightPredictor.GetPossiblePositions(chessPosition) : 
+                                         boardKnightPredictor.GetPossiblePositionsWith2Moves(chessPosition);
+
+            var result = positions.Select(x => x.AlgebraicNotation);
 
             return Ok(result);
         }
